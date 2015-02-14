@@ -262,7 +262,7 @@ a:link, a:visited, a:active {
 #Rightbar>.sep20:first-child:hover ~.box #MyNodes .node:nth-child(-n+@{node-count}) a:nth-of-type(1),
 #MyNodes:hover .node:nth-child(-n+@{node-count}) a:nth-of-type(1),
 #Rightbar>.sep20:first-child:hover ~.box table td:nth-of-type(3) a[href='/new'],
-#Rightbar .box:nth-child(2) .cell:nth-child(3) table td:nth-of-type(3):hover a[href='/new']{
+#Rightbar .box:nth-child(2) .cell:nth-last-child(2) table td:nth-of-type(3):hover a[href='/new']{
 	opacity: 1;
 	transform: scale(1);
 	transition: all 150ms cubic-bezier(.25, .25, 0, 1);
@@ -282,7 +282,7 @@ a:link, a:visited, a:active {
 }
 
 //显示发表按钮
-#Rightbar .box:nth-child(2) .cell:nth-child(3) table td:nth-of-type(3){
+#Rightbar .box:nth-child(2) .cell:nth-last-child(2) table td:nth-of-type(3){
 	position: fixed;
 	right: 48px;
 	bottom: 20px;
