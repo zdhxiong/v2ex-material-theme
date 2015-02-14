@@ -1,0 +1,433 @@
+@icon-url: "//dn-startplay.qbox.me/v2ex-material-theme";
+@font-color: #212121;
+@banner-color: #4285f4;
+@node-count: 6;//右侧显示的节点数量
+
+a:link, a:visited, a:active {
+	color: #778087;
+}
+.cell,
+.header{
+	border-bottom: 1px solid #eaeaea;
+}
+.cell,
+.item,
+.inner{
+	padding: 20px;
+}
+.avatar{
+	border-radius: 100%!important;
+}
+
+//banner
+#Top{
+	background-image: none;
+	background-color: @banner-color;
+	height: 56px;
+	font-size: 16px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+	padding: 0 20px;
+	z-index: 99;
+	a{
+		color: #fff;
+	}
+	.content{
+		padding-top: 4px;
+	}
+	td:first-child{
+		position: fixed;
+		left: 20px;
+		padding-top: 4px;
+	}
+	td:last-child{
+		position: fixed;
+		right: 20px;
+	}
+	//logo
+	a[name='top'] img{
+		-webkit-filter: invert(1);
+		filter: invert(1);
+	}
+	//搜索框
+	form{
+		div{
+			background: url("@{icon-url}/search.svg") no-repeat 10px center rgba(255, 255, 255, 0.15)!important;
+			border-radius: 2px;
+			height: 36px!important;
+			width: 820px!important;
+			&:hover{
+				background-color: rgba(255,255,255,.25)!important;
+			}
+		}
+		input{
+			color: #fff;
+			height: 36px;
+			width: 760px;
+			margin-left: 40px;
+		}
+	}
+}
+//banner右侧链接
+#Top td:last-child{
+	visibility: hidden;
+}
+#Top td:last-child a:last-child,
+#Top a[href='/settings'],
+#Rightbar .inner>a[href='/notifications'],
+#Rightbar .inner>strong>a[href='/notifications'],
+#Rightbar>.box:nth-child(2) td:first-child a[href^='/member/'],
+#Rightbar a[href='/mission/daily']{
+	visibility: visible;
+	position: fixed;
+	top: 10px;
+	color:rgba(255,255,255,0);
+	width: 36px;
+	height: 36px;
+	border-radius: 100%;
+	overflow: hidden;
+}
+#Top td:last-child a:last-child:focus,
+#Top a[href='/settings']:focus,
+#Rightbar .inner>a[href='/notifications']:focus,
+#Rightbar .inner>strong>a[href='/notifications']:focus,
+#Rightbar a[href='/mission/daily']:focus{
+	background-color:rgba(0,0,0,.1);
+}
+//登出
+#Top td:last-child a:last-child{
+	right: 26px;
+	background: url("@{icon-url}/exit_to_app.svg") no-repeat center;
+}
+//设置
+#Top a[href='/settings']{
+	right: 72px;
+	background: url("@{icon-url}/settings.svg") no-repeat center;
+}
+//没有新消息
+#Rightbar .inner>a[href='/notifications']{
+	right: 120px;
+	background: url("@{icon-url}/notifications_none.svg") no-repeat center;
+}
+//有新消息
+#Rightbar .inner>strong>a[href='/notifications']{
+	right: 120px;
+	background: url("@{icon-url}/notifications_none_hl.svg") no-repeat center;
+}
+//头像
+#Rightbar>.box:nth-child(2) td:first-child a[href^='/member/']{
+	right: 180px;
+	.avatar{
+		width: 36px;
+		height: 36px;
+	}
+}
+//签到链接
+#Rightbar a[href='/mission/daily']{
+	right: 240px;
+	background: url("@{icon-url}/wallet_giftcard_hl.svg") no-repeat center;
+}
+
+@media only screen and (max-width : 1220px) {
+	#Top{
+		td:first-child{
+			position: relative;
+		}
+		td:last-child{
+			position: relative;
+		}
+		form div{
+			width: 276px!important;
+		}
+		form input{
+			width: 236px;
+		}
+	}
+}
+
+#Wrapper{
+	background-color: #ececec;
+	padding-top: 80px;
+}
+
+#Rightbar{
+	visibility: hidden;
+	position: fixed;
+	z-index: 999;
+}
+
+//右下角的按钮们
+#MyNodes .node a:nth-of-type(1),
+#Rightbar>.sep20:first-child,
+#Rightbar table td:nth-of-type(3) a[href='/new']{
+	border-radius: 100%;
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+	transition: all 150ms cubic-bezier(.25,.25,0,1);
+	&:hover{
+		box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+		transition: box-shadow 150ms cubic-bezier(0,0,.2,1);
+	}
+	&:active{
+		box-shadow: 0 0 8px rgba(0,0,0,.18),0 8px 16px rgba(0,0,0,.36);
+	}
+}
+
+//收藏的节点
+#MyNodes{
+	visibility: visible;
+	position: fixed;
+	right: 20px;
+	bottom: 48px;
+	width: 56px;
+	height: @node-count * 58px + 24px;
+	.node{
+		padding: 0;
+		position: relative;
+		height: 58px;
+		text-align: right;
+		&:hover{
+			background: none;
+			border: none;
+			box-shadow: none;
+		}
+		a:last-child{
+			position: absolute;
+			display: none;
+			right: 60px;
+			top: 8px;
+			white-space:nowrap;
+			background: rgba(70,70,70,.9);
+			border-radius: 2px;
+			box-shadow: 0 1px 2px rgba(0,0,0,.15);
+			color: #ececec;
+			font-weight: bold;
+			line-height: 1em;
+			font-size: 12px;
+			min-width: 20px;
+			max-width: 200px;
+			overflow: hidden;
+			padding: 6px 8px;
+			text-overflow: ellipsis;
+			vertical-align: middle;
+			text-decoration:none;
+			opacity: 0;
+			transition: opacity 150ms cubic-bezier(.4,0,1,1);
+		}
+		a:nth-of-type(1){
+			position: absolute;
+			top: 0;
+			right: 8px;;
+			width: 40px;
+			height: 40px;
+			opacity: 0;
+			transform: scale(0);
+			&:hover{
+				+a{
+					display: block;
+					opacity: 1;
+					transition-delay: 10ms;
+					transition: opacity 150ms cubic-bezier(0,0,.2,1);
+				}
+			}
+			img{
+				width: 40px;
+				height: 40px;
+				border-radius: 100%;
+			}
+		}
+	}
+	.node_compose{
+		display:none;
+	}
+}
+
+//右下角图标
+#Rightbar>.sep20:first-child{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	width: 56px;
+	height: 56px;
+	color:rgba(255,255,255,0);
+	visibility: visible;
+	background: url("@{icon-url}/add.svg") no-repeat center #db4437;
+	z-index: 99;
+	cursor: pointer;
+}
+
+//节点和发表按钮
+#Rightbar>.sep20:first-child:hover ~.box #MyNodes .node:nth-child(-n+@{node-count}) a:nth-of-type(1),
+#MyNodes:hover .node:nth-child(-n+@{node-count}) a:nth-of-type(1),
+#Rightbar>.sep20:first-child:hover ~.box table td:nth-of-type(3) a[href='/new'],
+#Rightbar .box:nth-child(2) .cell:nth-child(3) table td:nth-of-type(3):hover a[href='/new']{
+	opacity: 1;
+	transform: scale(1);
+	transition: all 150ms cubic-bezier(.25, .25, 0, 1);
+}
+
+//显示节点的动画
+#Rightbar>.sep20:first-child:hover ~.box #MyNodes,
+#MyNodes:hover{
+	//收藏节点动画
+	.loopNodeAnimate (@index) when (@index<=@node-count){
+		.node:nth-child(@{index}) a:nth-of-type(1){
+			transition-delay: (@node-count - @index) * 15ms;
+		}
+		.loopNodeAnimate(@index + 1);
+	}
+	.loopNodeAnimate(1);
+}
+
+//显示发表按钮
+#Rightbar .box:nth-child(2) .cell:nth-child(3) table td:nth-of-type(3){
+	position: fixed;
+	right: 48px;
+	bottom: 20px;
+	width: 86px;
+	height: 56px;
+	visibility: visible;
+}
+#Rightbar table td:nth-of-type(3) a[href='/new']{
+	position: fixed;
+	right: 94px;
+	bottom: 28px;
+	width: 40px;
+	height: 40px;
+	color:rgba(255,255,255,0);
+	visibility: visible;
+	background: url("@{icon-url}/create.svg") no-repeat center #4caf50;
+	opacity: 0;
+	transform: scale(0);
+}
+
+#Main{
+	margin: 0;
+	>.box{
+		border-radius: 0;
+		box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+		border-bottom: none;
+		background-color: #fff;
+		color: @font-color;
+	}
+	//话题列表
+	>.box:nth-child(2){
+		.cell{
+			padding: 10px 20px;
+			position: relative;
+			&.item>div{
+				position: absolute;
+				right: 0;
+				top: 0;
+				margin: 0!important;
+			}
+			.small.fade{
+				visibility: hidden;
+				strong:nth-of-type(1){
+					visibility: visible;
+					position: absolute;
+					left: 72px;
+					font-size: 14px;
+				}
+			}
+			.item_title{
+				position: absolute;
+				left: 256px;
+				right: 60px;
+				height: 24px;
+				line-height: 24px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			.vote{
+				display: none;
+			}
+			.avatar{
+				width: 28px;
+				height: 28px;
+			}
+		}
+	}
+}
+
+//话题内容
+.header{
+	padding: 20px;
+}
+.topic_buttons{
+	border-radius: 0;
+	line-height: 36px;
+	background: #e8e9ed;
+	>div{
+		line-height: 36px!important;
+	}
+}
+.topic_content,
+.reply_content,
+.inner,
+.payload{
+	color: @font-color;
+	font: 400 14px/1.8  Avenir, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+}
+.mll, .sll, .mle {
+	background-color: #fff;
+	color: @font-color;
+	border: 1px solid #ddd;
+	border-radius: 0;
+	padding: 10px;
+	width: 908px!important;
+}
+.no{
+	background-color: #f0f0f0;
+	color: #ccc;
+}
+.cell,
+.inner:last-child{
+	.avatar{
+		width: 40px;
+		height: 40px;
+	}
+}
+.subtle{
+	padding: 20px;
+}
+
+//按钮
+.super.button{
+	background-color: @banner-color;
+	background-image: none;
+	text-shadow: none;
+	color: #fff;
+	box-shadow: 0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+	border-radius: 2px;
+	line-height: 2.5;
+	margin: 4px 0;
+	padding: 0 16px;
+	transition: box-shadow .2s cubic-bezier(.4,0,.2,1),background-color .2s cubic-bezier(.4,0,.2,1);
+	&:hover{
+		background-color: #3a76e5;
+		color: #fff;
+		text-shadow: none;
+		box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+	}
+	&:active{
+		background-color: #3367d6;
+		color: #fff;
+		text-shadow: none;
+		box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+	}
+}
+
+//消息页面
+//消息页面删除按钮右浮
+a[onclick^='deleteNotification']{
+	float: right;
+}
+//去掉消息内容的背景
+.payload{
+	background-color: rgba(255,255,255,0);
+	padding-top: 15px;
+}
