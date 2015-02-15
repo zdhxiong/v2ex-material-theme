@@ -38,14 +38,17 @@ a:active {
   position: fixed;
   left: 20px;
   padding-top: 4px;
+  width: 94px;
+  height: 30px;
+  background: url("//dn-startplay.qbox.me/v2ex-material-theme/logo@2x.png?imageView2/1/w/94/h/30") no-repeat 0 4px;
+  background-size: 94px 30px;
 }
 #Top td:last-child {
   position: fixed;
   right: 20px;
 }
 #Top a[name='top'] img {
-  -webkit-filter: invert(1);
-  filter: invert(1);
+  opacity: 0;
 }
 #Top form div {
   background: url("//dn-startplay.qbox.me/v2ex-material-theme/search.svg") no-repeat 10px center rgba(255, 255, 255, 0.15) !important;
