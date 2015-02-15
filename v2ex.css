@@ -43,23 +43,23 @@ a:active {
   background: url("//dn-startplay.qbox.me/v2ex-material-theme/logo@2x.png?imageView2/1/w/94/h/30") no-repeat 0 4px;
   background-size: 94px 30px;
 }
+#Top a[name='top'] img {
+  opacity: 0;
+}
 #Top td:last-child {
   position: fixed;
   right: 20px;
 }
-#Top a[name='top'] img {
-  opacity: 0;
-}
-#Top form div {
+#Search form div {
   background: url("//dn-startplay.qbox.me/v2ex-material-theme/search.svg") no-repeat 10px center rgba(255, 255, 255, 0.15) !important;
   border-radius: 2px;
   height: 36px!important;
   width: 820px!important;
 }
-#Top form div:hover {
+#Search form div:hover {
   background-color: rgba(255, 255, 255, 0.25) !important;
 }
-#Top form input {
+#Search form input {
   color: #fff;
   height: 36px;
   width: 760px;
@@ -117,18 +117,16 @@ a:active {
   right: 240px;
   background: url("//dn-startplay.qbox.me/v2ex-material-theme/wallet_giftcard_hl.svg") no-repeat center;
 }
-@media only screen and (max-width: 1220px) {
-  #Top td:first-child {
-    position: relative;
-  }
-  #Top td:last-child {
-    position: relative;
-  }
+@media only screen and (max-width: 1260px) {
   #Top form div {
     width: 276px!important;
   }
   #Top form input {
     width: 236px;
+  }
+  #Search {
+    position: fixed;
+    left: 140px;
   }
 }
 #Wrapper {

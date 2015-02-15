@@ -38,6 +38,7 @@ a:link, a:visited, a:active {
 	.content{
 		padding-top: 4px;
 	}
+	//logo
 	td:first-child{
 		position: fixed;
 		left: 20px;
@@ -47,15 +48,17 @@ a:link, a:visited, a:active {
 		background: url("@{icon-url}/logo@2x.png?imageView2/1/w/94/h/30") no-repeat 0 4px;
 		background-size: 94px 30px;
 	}
+	a[name='top'] img{
+		opacity: 0;
+	}
+	//右侧图标
 	td:last-child{
 		position: fixed;
 		right: 20px;
 	}
-	//logo
-	a[name='top'] img{
-		opacity: 0;
-	}
-	//搜索框
+}
+//搜索框
+#Search{
 	form{
 		div{
 			background: url("@{icon-url}/search.svg") no-repeat 10px center rgba(255, 255, 255, 0.15)!important;
@@ -74,6 +77,7 @@ a:link, a:visited, a:active {
 		}
 	}
 }
+
 //banner右侧链接
 #Top td:last-child{
 	visibility: hidden;
@@ -134,20 +138,18 @@ a:link, a:visited, a:active {
 	background: url("@{icon-url}/wallet_giftcard_hl.svg") no-repeat center;
 }
 
-@media only screen and (max-width : 1220px) {
+@media only screen and (max-width : 1260px) {
 	#Top{
-		td:first-child{
-			position: relative;
-		}
-		td:last-child{
-			position: relative;
-		}
 		form div{
 			width: 276px!important;
 		}
 		form input{
 			width: 236px;
 		}
+	}
+	#Search{
+		position: fixed;
+		left: 140px;
 	}
 }
 
