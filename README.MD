@@ -1,5 +1,7 @@
 # V2EX MATERIAL THEME
 
+新版本：https://github.com/zdhxiong/v2ex-material-theme/tree/2.0
+
 ## 代码
 
 	@import url("//dn-startplay.qbox.me/v2ex-material-theme/v2ex.min.css");
