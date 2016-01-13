@@ -1,6 +1,6 @@
 # V2EX MATERIAL THEME
 
-新版本：https://github.com/zdhxiong/v2ex-material-theme/tree/2.0
+新版本（仅支持 Chrome）：https://github.com/zdhxiong/v2ex-material-theme2
 
 ## 代码
 
