@@ -376,24 +376,36 @@ a:active {
   background-image: none;
   text-shadow: none;
   color: #fff;
+  border: none!important;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
   border-radius: 2px;
   line-height: 2.5;
   margin: 4px 0;
   padding: 0 16px;
+  letter-spacing: 0.5px;
   transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .super.button:hover {
-  background-color: #3a76e5;
-  color: #fff;
-  text-shadow: none;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  background-color: #3a76e5!important;
+  color: #fff!important;
+  border: none!important;
+  text-shadow: none!important;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28) !important;
 }
 .super.button:active {
-  background-color: #3367d6;
-  color: #fff;
-  text-shadow: none;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+  background-color: #3367d6!important;
+  color: #fff!important;
+  border: none!important;
+  text-shadow: none!important;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32) !important;
+}
+.super.button[disabled],
+.super.button[disabled]:hover,
+.super.button[disabled]:active {
+  background-color: rgba(0, 0, 0, 0.12) !important;
+  color: rgba(0, 0, 0, 0.26) !important;
+  box-shadow: none!important;
+  text-shadow: none!important;
 }
 a[onclick^='deleteNotification'] {
   float: right;
