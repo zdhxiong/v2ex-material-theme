@@ -428,7 +428,8 @@ a:link, a:visited, a:active {
 		text-shadow: none!important;
 		box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32)!important;
 	}
-	&[disabled]{
+	&[disabled],
+	&.disable_now{
 		&,
 		&:hover,
 		&:active{
@@ -438,6 +439,27 @@ a:link, a:visited, a:active {
 			text-shadow: none!important;
 		}
 	}
+}
+
+//分页页码
+.page_current,
+.page_normal{
+	border: none!important;
+	box-shadow: none!important;
+	border-radius: 2px!important;
+	line-height: 2.5!important;
+	margin: 4px 0!important;
+	padding: 0 10px!important;
+	letter-spacing: 0.5px;
+	transition: box-shadow .2s cubic-bezier(.4,0,.2,1),background-color .2s cubic-bezier(.4,0,.2,1);
+	font-size: 13px!important;
+}
+//分页输入框
+.page_input{
+	line-height: 30px!important;
+	padding: 0 0 0 8px!important;
+	width: 60px!important;
+	box-shadow: none!important;
 }
 
 //消息页面

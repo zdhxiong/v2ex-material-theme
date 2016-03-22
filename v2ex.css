@@ -400,12 +400,33 @@ a:active {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32) !important;
 }
 .super.button[disabled],
+.super.button.disable_now,
 .super.button[disabled]:hover,
-.super.button[disabled]:active {
+.super.button.disable_now:hover,
+.super.button[disabled]:active,
+.super.button.disable_now:active {
   background-color: rgba(0, 0, 0, 0.12) !important;
   color: rgba(0, 0, 0, 0.26) !important;
   box-shadow: none!important;
   text-shadow: none!important;
+}
+.page_current,
+.page_normal {
+  border: none!important;
+  box-shadow: none!important;
+  border-radius: 2px!important;
+  line-height: 2.5!important;
+  margin: 4px 0!important;
+  padding: 0 10px!important;
+  letter-spacing: 0.5px;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 13px!important;
+}
+.page_input {
+  line-height: 30px!important;
+  padding: 0 0 0 8px!important;
+  width: 60px!important;
+  box-shadow: none!important;
 }
 a[onclick^='deleteNotification'] {
   float: right;
