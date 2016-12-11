@@ -4,7 +4,7 @@
 
 ## 代码
 
-	@import url("//dn-startplay.qbox.me/v2ex-material-theme/v2ex.min.css");
+	@import url("//plays.b0.upaiyun.com/v2ex-material-theme/v2ex.min.css");
 	
 ## 使用方法
 
