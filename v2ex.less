@@ -43,13 +43,10 @@ a:link, a:visited, a:active {
 		position: fixed;
 		left: 20px;
 		padding-top: 4px;
-		width: 94px;
-		height: 30px;
-		background: url("@{icon-url}/logo@2x.png") no-repeat 0 4px;
-		background-size: 94px 30px;
+		cursor: pointer;
 	}
-	a[name='top'] img{
-		opacity: 0;
+	#Logo {
+		background-image: url("@{icon-url}/logo@2x.png");
 	}
 	//右侧图标
 	td:last-child{
@@ -188,6 +185,7 @@ a:link, a:visited, a:active {
 	bottom: 48px;
 	width: 56px;
 	height: @node-count * 58px + 24px;
+	background-color: transparent;
 	.node{
 		padding: 0;
 		position: relative;
@@ -322,13 +320,7 @@ a:link, a:visited, a:active {
 		.cell{
 			padding: 10px 20px;
 			position: relative;
-			&.item>div{
-				position: absolute;
-				right: 0;
-				top: 0;
-				margin: 0!important;
-			}
-			.small.fade{
+			.topic_info{
 				visibility: hidden;
 				strong:nth-of-type(1){
 					visibility: visible;
@@ -340,7 +332,7 @@ a:link, a:visited, a:active {
 			.item_title{
 				position: absolute;
 				left: 256px;
-				right: 60px;
+				right: 78px;
 				height: 24px;
 				line-height: 24px;
 				overflow: hidden;
