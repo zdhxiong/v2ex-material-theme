@@ -297,10 +297,12 @@ a:active {
   padding: 10px 20px;
   position: relative;
 }
-#Main > .box:nth-child(2) .cell .topic_info {
+#Main > .box:nth-child(2) .cell .topic_info,
+#Main > .box:nth-child(2) .cell .small {
   visibility: hidden;
 }
-#Main > .box:nth-child(2) .cell .topic_info strong:nth-of-type(1) {
+#Main > .box:nth-child(2) .cell .topic_info strong:nth-of-type(1),
+#Main > .box:nth-child(2) .cell .small strong:nth-of-type(1) {
   visibility: visible;
   position: absolute;
   left: 72px;
