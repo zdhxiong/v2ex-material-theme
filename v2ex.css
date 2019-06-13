@@ -44,14 +44,14 @@ a:active {
   cursor: pointer;
 }
 #Top #Logo {
-  background-image: url("//plays.b0.upaiyun.com/v2ex-material-theme/icon/logo@2x.png");
+  background-image: url("//play.cdn.w3cbus.com/v2ex-material-theme/icon/logo@2x.png");
 }
 #Top td:last-child {
   position: fixed;
   right: 20px;
 }
 #Search form div {
-  background: url("//plays.b0.upaiyun.com/v2ex-material-theme/icon/search.svg") no-repeat 10px center rgba(255, 255, 255, 0.15) !important;
+  background: url("//play.cdn.w3cbus.com/v2ex-material-theme/icon/search.svg") no-repeat 10px center rgba(255, 255, 255, 0.15) !important;
   border-radius: 2px;
   height: 36px!important;
   width: 820px!important;
@@ -92,19 +92,19 @@ a:active {
 }
 #Top td:last-child a:last-child {
   right: 26px;
-  background: url("//plays.b0.upaiyun.com/v2ex-material-theme/icon/exit_to_app.svg") no-repeat center;
+  background: url("//play.cdn.w3cbus.com/v2ex-material-theme/icon/exit_to_app.svg") no-repeat center;
 }
 #Top a[href='/settings'] {
   right: 72px;
-  background: url("//plays.b0.upaiyun.com/v2ex-material-theme/icon/settings.svg") no-repeat center;
+  background: url("//play.cdn.w3cbus.com/v2ex-material-theme/icon/settings.svg") no-repeat center;
 }
 #Rightbar .inner > a[href='/notifications'] {
   right: 120px;
-  background: url("//plays.b0.upaiyun.com/v2ex-material-theme/icon/notifications_none.svg") no-repeat center;
+  background: url("//play.cdn.w3cbus.com/v2ex-material-theme/icon/notifications_none.svg") no-repeat center;
 }
 #Rightbar .inner > strong > a[href='/notifications'] {
   right: 120px;
-  background: url("//plays.b0.upaiyun.com/v2ex-material-theme/icon/notifications_none_hl.svg") no-repeat center;
+  background: url("//play.cdn.w3cbus.com/v2ex-material-theme/icon/notifications_none_hl.svg") no-repeat center;
 }
 #Rightbar > .box:nth-child(2) td:first-child a[href^='/member/'] {
   right: 180px;
@@ -115,7 +115,7 @@ a:active {
 }
 #Rightbar a[href='/mission/daily'] {
   right: 240px;
-  background: url("//plays.b0.upaiyun.com/v2ex-material-theme/icon/wallet_giftcard_hl.svg") no-repeat center;
+  background: url("//play.cdn.w3cbus.com/v2ex-material-theme/icon/wallet_giftcard_hl.svg") no-repeat center;
 }
 @media only screen and (max-width: 1400px) {
   #Top form div {
@@ -230,7 +230,7 @@ a:active {
   height: 56px;
   color: rgba(255, 255, 255, 0);
   visibility: visible;
-  background: url("//plays.b0.upaiyun.com/v2ex-material-theme/icon/add.svg") no-repeat center #db4437;
+  background: url("//play.cdn.w3cbus.com/v2ex-material-theme/icon/add.svg") no-repeat center #db4437;
   z-index: 99;
   cursor: pointer;
 }
@@ -282,7 +282,7 @@ a:active {
   height: 40px;
   color: rgba(255, 255, 255, 0);
   visibility: visible;
-  background: url("//plays.b0.upaiyun.com/v2ex-material-theme/icon/create.svg") no-repeat center #4caf50;
+  background: url("//play.cdn.w3cbus.com/v2ex-material-theme/icon/create.svg") no-repeat center #4caf50;
   opacity: 0;
   transform: scale(0);
 }
