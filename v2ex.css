@@ -1,6 +1,9 @@
 .adsbygoogle {
   display: none !important;
 }
+.box {
+  backdrop-filter: none;
+}
 a:link,
 a:visited,
 a:active {
